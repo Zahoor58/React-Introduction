@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 class Footer extends Component {
     render() {
-        return <h1 > This is our Footer < /h1>
+        return <h1 > { this.props.trademark } < /h1>
     }
 
 }

@@ -8,10 +8,10 @@ function App() {
     return ( <
         div className = "App" >
         <
-        Header / >
+        Header info = "This is my message" / >
         <
         p > main content < /p>  <
-        Footer / > < /
+        Footer trademark = "Page by Zahoor" / > < /
         div >
     );
 }
