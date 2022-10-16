@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import { CtxConsumer } from "../index";
 class Footer extends Component {
   // inside class
   // createAlert() {
@@ -15,20 +15,30 @@ class Footer extends Component {
     console.log("changed", evt.target.value);
   };
   render() {
-    const animals=['cat','dog','horse']
+    // const animals = ["cat", "dog", "horse"];
     return (
-      <div>
-            {
-                animals.map(animal=>{
-                    return (
-                    <div key={animal}>
-                        <h1>{animal}</h1>
-                        <h1>{animal}</h1>
-                    </div>
-                    )
-                })
-            }
-      </div>
+      <CtxConsumer>
+        {
+          (context)=>(
+            <div>
+            {context.animals.map((animal) => {
+              return (
+                <div key={animal}>
+                  <h1> {animal} </h1> <h1> {animal} </h1>{" "}
+                </div>
+              );
+            })}
+          </div>
+          )
+        }
+        {/* {animals.map((animal) => {
+          return (
+            <div key={animal}>
+              <h1> {animal} </h1> <h1> {animal} </h1>{" "}
+            </div>
+          );
+        })} */}
+      </CtxConsumer>
     );
   }
 }
