@@ -1,9 +1,11 @@
-import React from "react";
+import React ,{useState}from "react";
 import "./App.css";
 // import { Header } from './components/header';
 import Header from "./components/header";
 import Footer from "./components/footer.js";
-import styled, { css } from 'styled-components'
+import Numbers from "./components/numbers";
+import styled, { css } from "styled-components";
+
 function createAlert() {
   alert("Hello, you clicked me");
 }
@@ -17,23 +19,18 @@ function ShowMessage(props) {
 }
 const pStyle = {
   fontSize: "2em",
-  color:'red',
+  color: "red",
 };
- const Paragraph=styled.p`
- font-size:3em;
- color:green;
- `;
+const Paragraph = styled.p`
+  font-size: 3em;
+  color: green;
+`;
+
 function App() {
+  
   return (
     <div className="App">
-      <Header info="This is my message" />
-      <p style={pStyle}> main content </p>{" "}
-      <Paragraph>
-        New style
-      </Paragraph>
-      <Footer trademark="Page by Zahoor" myalert={createAlert} />{" "}
-      {/* ShowMessage toShow = { true }
-                   / >  */}{" "}
+      <Numbers></Numbers>
     </div>
   );
 }
